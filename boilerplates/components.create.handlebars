@@ -1,13 +1,20 @@
-import React from 'react';
-{{#if css}}import styles from './{{componentName}}.css';
-{{/if}}
+import React from 'react'
+import styled from 'styled-component'
 
-function {{componentName}}() {
+const Root = styled.div`
+
+`
+
+const {{componentName}} = ({foo}) {
   return (
-    {{#if css}}<div className={styles.normal}>{{else}}<div>{{/if}}
+    <Root>
       Component: {{componentName}}
-    </div>
-  );
+    </Root>
+  )
 }
 
-export default {{componentName}};
+{{componentName}}.propTypes = {
+  foo: React.PropsType.string,
+}
+
+export default {{componentName}}

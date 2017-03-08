@@ -1,18 +1,18 @@
-import React from 'react';
-import { connect } from 'dva';
-{{#if css}}import styles from './{{componentName}}.css';
-{{/if}}
+import React from 'react'
+import { connect } from 'dva'
+import styled from 'styled-component'
 
-function {{componentName}}() {
+const Root = styled.div`
+
+`
+const {{componentName}} = ({ {{namespace}} }) => {
   return (
-    {{#if css}}<div className={styles.normal}>{{else}}<div>{{/if}}
+    <Root>
       Route Component: {{componentName}}
-    </div>
-  );
+    </Root>
+  )
 }
 
-function mapStateToProps() {
-  return {};
-}
+export default connect(({ {{namespace}} }) => ({ {{namespace}} }))({{componentName}})
 
-export default connect(mapStateToProps)({{componentName}});
+

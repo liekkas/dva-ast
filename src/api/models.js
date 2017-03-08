@@ -20,15 +20,6 @@ export function create(payload) {
   const filePath = join(payload.sourcePath, payload.filePath);
   assert(!existsSync(filePath), 'api/models/create: file exists');
   writeFile(filePath, source);
-
-  // Add model to entry
-  if (payload.entry && payload.modelPath) {
-    addModel({
-      sourcePath: payload.sourcePath,
-      filePath: payload.entry,
-      modelPath: payload.modelPath,
-    });
-  }
 }
 
 export function remove(payload) {
