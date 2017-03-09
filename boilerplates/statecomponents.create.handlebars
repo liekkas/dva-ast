@@ -5,12 +5,18 @@ const Root = styled.div`
 
 `
 
-const {{componentName}} = ({ foo }) => {
-  return (
-    <Root>
-      Component: {{componentName}}
-    </Root>
-  )
+class {{componentName}} extends React.Component {
+  state = {
+
+  }
+
+  render() {
+    return (
+      <Root>
+        Component: {{componentName}}
+      </Root>
+    )
+  }
 }
 
 {{componentName}}.propTypes = {

@@ -1,6 +1,6 @@
 {
   "name": "dvax-ast",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "dva static analysis based on javascript ast.",
   "files": [
     "boilerplates",

@@ -1,0 +1,26 @@
+import React from 'react'
+import { connect } from 'dva'
+import styled from 'styled-component'
+
+const Root = styled.div`
+
+`
+
+class {{componentName}} extends React.Component {
+  state = {
+
+  }
+
+  render() {
+    const { {{namespace}} } = this.props
+    return (
+      <Root>
+        Component: {{componentName}}
+      </Root>
+    )
+  }
+}
+
+export default connect(({ {{namespace}} }) => ({ {{namespace}} }))({{componentName}})
+
+
